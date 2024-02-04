@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cruds</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Kanit:wght@200&family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Roboto:ital,wght@0,100;0,500;1,100;1,300;1,400&family=Rubik+Lines&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cruds">
+        <div class="container">
+            <div class="head">
+                <h2>crud</h2>
+                <p>product managment system</p>
+            </div>
+            <div class="input">
+                <input type="text" placeholder="title" id="title">
+                <div class="infonumber">
+                    <input onkeyup="gettotal()" type="number" placeholder="price" id="price">
+                    <input onkeyup="gettotal()" type="number" placeholder="taxes" id="taxes">
+                    <input onkeyup="gettotal()" type="number" placeholder="ads" id="ads">
+                    <input onkeyup="gettotal()" type="number" placeholder="discount" id="discount">
+                    <h3 onkeyup="gettotal()"  id="total"></hs>
+                </div>
+                <input type="number" placeholder="count" id="count">
+                <input type="text" placeholder="category" id="category">
+                <button id="create">Create</button>
+            </div>
+            <div class="output">
+                <input onkeyup="makesearch(this.value)" type="text" placeholder="search" id="search">
+                <div class="searchby">
+                    <button onclick="makesearchmood(this.id)" id="title">Search By Title</button>
+                    <button onclick="makesearchmood(this.id)" id="categ">Search By Category</button>
+                </div>
+                <button class="deleteall"  id="deleteall" ></button>
+                <table>
+                    <thead>
+                        <tr>
+                            <th >id</th>
+                            <th>title</th>
+                            <th>price</th>
+                            <th>taxes</th>
+                            <th>ads</th>
+                            <th>discount</th>
+                            <th>totle</th>
+                            <th>count</th>
+                            <th>category</th>
+                            <th class="update">update</th>
+                            <th class="delete">delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <tr>
+                            <td>1</td>
+                            <td>sumsong</td>
+                            <td>2000</td>
+                            <td>100</td>
+                            <td>100</td>
+                            <td>100</td>
+                            <td>2100</td>
+                            <td>phone</td>
+                            <td><button  class="update">update</button>
+                            </td>
+                            <td><button onclick="deleteelement()" class="delete">delete</button></td>
+                            </th>
+                        </tr> -->
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
